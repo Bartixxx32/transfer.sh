@@ -3,7 +3,8 @@ LABEL maintainer="Remco Verhoef <remco@dutchcoders.io>"
 
 # Copy the local package files to the container's workspace.
 ADD . /go/src/github.com/dutchcoders/transfer.sh
-
+ADD str /web/
+ADD full /web2/
 # build & install server
 RUN go build -o /go/bin/transfersh github.com/dutchcoders/transfer.sh
 
